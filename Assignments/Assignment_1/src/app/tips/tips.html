@@ -1,0 +1,41 @@
+<section id="tips" class="tips-section">
+  <div class="tips-bg"></div>
+
+  <div class="tips-inner">
+
+    <div class="section-badge">
+      <i class="ti ti-bulb"></i>
+      <span>Wellness Tips</span>
+    </div>
+
+    <h2 class="section-title">Expert Tips for a <em>Healthier You</em></h2>
+
+    <p class="section-sub">
+      Science-backed wellness tips to help you feel your best —
+      body, mind, and soul.
+    </p>
+
+    <div class="tips-grid">
+      <div class="tip-card" *ngFor="let tip of tips">
+
+        <div class="tip-card-icon" [ngClass]="tip.iconClass">
+          <i class="ti" [class]="tip.icon"></i>
+        </div>
+
+        <span class="tip-card-tag" [ngClass]="tip.tagClass">
+          {{ tip.tag }}
+        </span>
+
+        <div class="tip-card-title">{{ tip.title }}</div>
+        <div class="tip-card-desc">{{ tip.desc }}</div>
+
+        <div class="tip-card-footer">
+          <i class="ti ti-arrow-right"></i>
+          <span>Read more</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

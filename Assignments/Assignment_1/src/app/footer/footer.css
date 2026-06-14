@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+.footer {
+  background: #1E293B;
+  padding: 56px 8% 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Brand ── */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.footer-logo-leaf {
+  width: 34px;
+  height: 34px;
+  background: #4CAF50;
+  border-radius: 50% 50% 50% 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-leaf i {
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+.footer-logo-text span {
+  color: #4CAF50;
+}
+
+.footer-desc {
+  font-size: 13px;
+  color: #94A3B8;
+  line-height: 1.7;
+  max-width: 240px;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 8px;
+}
+
+.social-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.social-btn:hover {
+  background: #4CAF50;
+}
+
+.social-btn i {
+  font-size: 16px;
+  color: #94A3B8;
+  transition: color 0.2s;
+}
+
+.social-btn:hover i {
+  color: #fff;
+}
+
+/* ── Links ── */
+.footer-col-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a:hover {
+  color: #4CAF50;
+}
+
+.footer-links a i {
+  font-size: 13px;
+}
+
+/* ── Newsletter ── */
+.footer-newsletter {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.fn-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.fn-sub {
+  font-size: 12px;
+  color: #64748B;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.fn-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.fn-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+}
+
+.fn-input::placeholder {
+  color: #475569;
+}
+
+.fn-input:focus {
+  border-color: #4CAF50;
+}
+
+.fn-btn {
+  background: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.fn-btn i {
+  font-size: 16px;
+  color: #fff;
+}
+
+.fn-btn:hover {
+  background: #43A047;
+}
+
+/* ── Bottom Bar ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #475569;
+}
+
+.footer-copy span {
+  color: #4CAF50;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  font-size: 12px;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+  color: #4CAF50;
+}
+
+
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 5% 0;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}

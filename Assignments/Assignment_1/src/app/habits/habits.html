@@ -1,0 +1,76 @@
+<section id="habits" class="hh-section">
+  <div class="hh-bg"></div>
+  <div class="hh-bg2"></div>
+
+  <div class="hh-inner">
+
+    <div class="section-badge">
+      <i class="ti ti-leaf"></i>
+      <span>Healthy Habits</span>
+    </div>
+    <h2 class="section-title">Small Steps, <em>Big Changes</em></h2>
+    <p class="section-sub">
+      Build powerful daily habits that transform your body and mind.
+      Track your progress and celebrate every milestone.
+    </p>
+
+    <div class="habits-grid">
+      <div class="habit-card" *ngFor="let habit of habits">
+        <div class="habit-card-top">
+          <div class="habit-icon" [ngClass]="habit.iconClass">
+            <i class="ti" [ngClass]="habit.icon"></i>
+          </div>
+          <div class="habit-streak">
+            <i class="ti ti-flame"></i>
+            <span>{{ habit.streak }} days</span>
+          </div>
+        </div>
+        <div class="habit-name">{{ habit.name }}</div>
+        <div class="habit-desc">{{ habit.desc }}</div>
+        <div class="progress-label">
+          <span>Progress</span>
+          <strong>{{ habit.progress }}%</strong>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill"
+            [ngStyle]="{ 'width.%': habit.progress }"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hh-bottom">
+
+      <div class="weekly-card">
+        <div class="weekly-title">
+          <i class="ti ti-calendar"></i> This Week's Streak
+        </div>
+        <div class="week-days">
+          <div class="day-dot" *ngFor="let day of weekDays">
+            <div class="day-circle" [ngClass]="{
+              'day-done':  day.status === 'done',
+              'day-today': day.status === 'today',
+              'day-empty': day.status === 'empty'
+            }">
+              <i class="ti ti-check" *ngIf="day.status === 'done'"></i>
+              <span *ngIf="day.status !== 'done'">{{ day.label }}</span>
+            </div>
+            <span class="day-name">{{ day.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-title">
+          <i class="ti ti-bulb"></i> Quick Tips
+        </div>
+        <div class="tip-list">
+          <div class="tip-item" *ngFor="let tip of tips">
+            <div class="tip-check"><i class="ti ti-check"></i></div>
+            <span class="tip-text">{{ tip }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+<section id="routine" class="dr-section">
+  <div class="dr-bg"></div>
+  <div class="dr-bg2"></div>
+
+  <div class="dr-inner">
+
+    <div class="section-badge">
+      <i class="ti ti-clock"></i>
+      <span>Daily Routine</span>
+    </div>
+
+    <h2 class="section-title">Your Perfect <em>Daily Flow</em></h2>
+
+    <p class="section-sub">
+      A structured day leads to a structured mind. Follow this routine
+      to maximize your energy, focus, and wellbeing.
+    </p>
+
+    <div class="dr-grid">
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="tl-item" *ngFor="let item of routine; let last = last">
+
+          <div class="tl-left">
+            <div class="tl-dot" [ngClass]="item.dotClass">
+              <i class="ti" [class]="item.icon"></i>
+            </div>
+            <div class="tl-line" *ngIf="!last"></div>
+          </div>
+
+          <div class="tl-body">
+            <div class="tl-time">{{ item.time }}</div>
+            <div class="tl-name">{{ item.name }}</div>
+            <div class="tl-desc">{{ item.desc }}</div>
+            <span class="tl-pill">
+              <i class="ti ti-clock"></i>{{ item.duration }}
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="dr-right">
+
+        <!-- Progress Overview -->
+        <div class="progress-overview">
+          <div class="po-title">
+            <i class="ti ti-chart-pie"></i> Today's Progress
+          </div>
+          <div class="po-circle-wrap">
+            <div class="po-circle">
+              <div class="po-circle-inner">
+                <span class="po-pct">71%</span>
+                <span class="po-lbl">Done</span>
+              </div>
+            </div>
+            <div class="po-stats">
+              <div class="po-stat">
+                <span class="po-stat-label">Completed</span>
+                <span class="po-stat-val">5 / 7</span>
+              </div>
+              <div class="po-stat">
+                <span class="po-stat-label">Streak</span>
+                <span class="po-stat-val">14 days 🔥</span>
+              </div>
+              <div class="po-stat">
+                <span class="po-stat-label">Best Streak</span>
+                <span class="po-stat-val">21 days</span>
+              </div>
+              <div class="po-stat">
+                <span class="po-stat-label">This Week</span>
+                <span class="po-stat-val">92%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checklist -->
+        <div class="checklist">
+          <div class="cl-title">
+            <i class="ti ti-checklist"></i> Today's Checklist
+          </div>
+          <div class="cl-item" *ngFor="let task of checklist">
+            <div class="cl-check" [ngClass]="task.done ? 'cl-done' : 'cl-pending'">
+              <i class="ti ti-check" *ngIf="task.done"></i>
+            </div>
+            <span class="cl-text" [class.done]="task.done">{{ task.name }}</span>
+            <span class="cl-time">{{ task.time }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

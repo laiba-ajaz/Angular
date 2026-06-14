@@ -1,0 +1,47 @@
+<section class="test-section">
+  <div class="test-bg"></div>
+
+  <div class="test-inner">
+
+    <div class="section-badge">
+      <i class="ti ti-quote"></i>
+      <span>Testimonials</span>
+    </div>
+
+    <h2 class="section-title">Real People, <em>Real Results</em></h2>
+
+    <p class="section-sub">
+      Thousands of people have transformed their lives with ZenWell.
+      Here's what they have to say.
+    </p>
+
+    <div class="test-grid">
+      <div
+        class="test-card"
+        *ngFor="let t of testimonials">
+
+        <div class="test-stars">
+          <i class="ti ti-star-filled"></i>
+          <i class="ti ti-star-filled"></i>
+          <i class="ti ti-star-filled"></i>
+          <i class="ti ti-star-filled"></i>
+          <i class="ti ti-star-filled"></i>
+        </div>
+
+        <p class="test-quote">{{ t.quote }}</p>
+
+        <div class="test-author">
+          <div class="test-avatar" [ngClass]="t.avatarClass">
+            {{ t.initials }}
+          </div>
+          <div>
+            <div class="test-name">{{ t.name }}</div>
+            <div class="test-role">{{ t.role }}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

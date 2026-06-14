@@ -1,0 +1,80 @@
+<section id="home" class="hero">
+  <div class="hero-bg-blob"></div>
+  <div class="hero-bg-blob2"></div>
+
+  <div class="hero-left">
+
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Your Wellness Journey Starts Here</span>
+    </div>
+
+    <h1>Take Care of Your<br><em>Mind & Body</em></h1>
+
+    <p class="hero-sub">
+      Build healthy habits, find your calm, and create a daily routine
+      that truly works for you — one small step at a time.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-primary" (click)="startJourney()">
+        <i class="ti ti-heart"></i>
+        Start Your Journey
+      </button>
+      <button class="btn-ghost" (click)="watchVideo()">
+        <i class="ti ti-player-play"></i>
+        Watch How It Works
+      </button>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item" *ngFor="let stat of stats; let last = last">
+        <span class="stat-num">{{ stat.value }}<span>{{ stat.suffix
+            }}</span></span>
+        <span class="stat-label">{{ stat.label }}</span>
+        <div class="stat-divider"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="ring ring-2"></div>
+      <div class="ring ring-1"></div>
+
+      <div class="visual-circle">
+        <div class="visual-center">
+          <i class="ti ti-leaf visual-icon"></i>
+          <div class="visual-text">Live Mindfully</div>
+          <div class="visual-sub">Every single day</div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-1">
+        <div class="fc-icon fc-green"><i class="ti ti-moon"></i></div>
+        <div>
+          <div class="fc-title">Sleep Tracker</div>
+          <div class="fc-sub">8h 12m last night</div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-2">
+        <div class="fc-icon fc-teal"><i class="ti ti-brain"></i></div>
+        <div>
+          <div class="fc-title">Meditation</div>
+          <div class="fc-sub">10 min streak: 7 days</div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-3">
+        <div class="fc-icon fc-amber"><i class="ti ti-flame"></i></div>
+        <div>
+          <div class="fc-title">Daily Streak</div>
+          <div class="fc-sub">21 days strong!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

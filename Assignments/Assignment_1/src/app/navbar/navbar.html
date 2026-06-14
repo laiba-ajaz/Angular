@@ -1,0 +1,33 @@
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<div class="nav-shell">
+  <nav class="nav">
+
+    <a routerLink="/" class="logo">
+      <div class="logo-leaf">
+        <i class="ti ti-leaf"></i>
+      </div>
+      <span class="logo-text">{{ logoName }}</span>
+    </a>
+
+    <ul class="nav-links">
+      <li *ngFor="let item of navLinks">
+        <a [routerLink]="item.path">
+          <i class="ti {{ item.icon }}"></i> {{ item.name }}
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="nav-right">
+      <button class="btn-outline">Sign in</button>
+      <button class="btn-solid">
+        <i class="ti ti-heart"></i>
+        Start Wellness
+      </button>
+    </div>
+
+  </nav>
+  <div class="nav-accent"></div>
+</div>
