@@ -1,0 +1,21 @@
+<h2>Country Card</h2>
+
+<div class="search-container">
+  <input [(ngModel)]="searchQuery" placeholder="Enter country name...">
+  <button (click)="onSearch()">Search</button>
+</div>
+
+<div *ngIf="countryData" class="card">
+  <h3>Country: {{ countryData.country }}</h3>
+  <p><strong>ISO Code:</strong> {{ countryData.iso2 }}</p>
+  <p><strong>ISO Code:</strong> {{ countryData.iso3 }}</p>
+  
+  <h4>Major Cities:</h4>
+  <ul>
+    @for (city of countryData.cities; track city) {
+      <li>{{ city }}</li>
+    } @empty {
+      <li>No cities available</li>
+    }
+  </ul>
+</div>
