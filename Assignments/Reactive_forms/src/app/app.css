@@ -1,0 +1,194 @@
+.page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #a7d8ff 0%, #c9e8ff 50%, #d6ecff 100%);
+}
+
+.form-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  padding: 40px 45px;
+  box-shadow: 0 20px 45px rgba(0, 80, 180, 0.15);
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 700;
+  color: #2f6fed;
+  margin-bottom: 30px;
+}
+
+/* --- 2 Column Grid for form --- */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+
+/* Fields that should span full width */
+form > div:has(textarea),
+form > .form-check.mb-3,
+form > button {
+  grid-column: 1 / -1;
+}
+
+.mb-3 {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  border: 1px solid #d7e3f5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background-color: #f7fafd;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2f6fed;
+  box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.15);
+  background-color: #fff;
+  outline: none;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* --- Radio buttons (Gender / Status) --- */
+.form-check-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 20px;
+  margin-top: 6px;
+}
+
+.form-check-input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #2f6fed;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #2f6fed;
+  border-color: #2f6fed;
+}
+
+.form-check-label {
+  color: #444;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* --- Terms checkbox row --- */
+.form-check.mb-3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* --- Submit button --- */
+.btn-primary {
+  width: 100%;
+  background: linear-gradient(90deg, #2f6fed, #4a90ff);
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #245ed1, #3a7de6);
+}
+/* --- Table Wrapper (margin + spacing) --- */
+.table {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 50px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 80, 180, 0.15);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th {
+  background: linear-gradient(90deg, #2f6fed, #4a90ff);
+  color: #fff;
+  padding: 16px 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.table th:first-child {
+  border-top-left-radius: 16px;
+}
+
+.table th:last-child {
+  border-top-right-radius: 16px;
+}
+
+.table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  color: #333;
+  font-size: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f7fafd;
+}
+
+.table tbody tr:hover {
+  background-color: #eaf2ff;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Responsive: mobile pe 1 column --- */
+@media (max-width: 700px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}
